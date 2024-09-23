@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="max-w-7xl mx-auto">
+    <!-- section: Navbar start -->
+    <div class="bg-white shadow sticky top-0">
+      <nav class="p-4 m-4 flex justify-between items-center bg-[#F9F7F3]">
+        <div>
+          <p>Blog</p>
+        </div>
+        <div class="flex items-center">
+          <img src="assets/logo.png" alt="" />
+          <span>Donate Bangladesh</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <img src="assets/coin.png" alt="" />
+          <span id="my-bal">5500</span>
+        </div>
+      </nav>
+      <div class="flex items-center justify-center">
+        <button id="donation-tab" class="bg-[#B4F461]">Donation</button>
+        <button id="history-tab">History</button>
+      </div>
+    </div>
+    <!-- section: End -->
+
+    <!-- section: Card Start -->
+    <section id="card-section">
+      <div class="flex gap-x-6 items-center">
+        <div>
+          <img src="assets/noakhali.png" alt="" />
+        </div>
+        <div class="space-y-2">
+          <p class="flex items-center space-x-1">
+            <img src="assets/coin.png" alt="" />
+            <span id="total-donate-amount">500</span>
+            <span>BDT</span>
+          </p>
+          <h3 id="donate-zone">Donate for Flood at Noakhali, Bangladesh</h3>
+          <p>
+            The recent floods in Noakhali have caused significant damage to
+            homes infrastructure. Your donation will help provide essential
+            supplies and to those affected by this disaster. Every contribution,
+            big or small, makes difference. Please join us in supporting the
+            relief efforts and making a positive impact on the lives of those in
+            need.
+          </p>
+          <input
+            id="donate-input-field"
+            class="border py-2 bordrer"
+            placeholder="Donate amount"
+            type="text"
+          />
+          <button id="donate-btn" class="border rounded px-4 py-2 btn">
+            Donate Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- section: History sec start -->
+    <section>
+      <div id="history-section" class="space-y-2 bg-red-400 hidden">
+        <h2 class="text-2xl flex justify-center items-center">
+          Donate History
+        </h2>
+      </div>
+    </section>
+    <!-- section: History sec End -->
+    <script></script>
+
+    <script src="donate.js"></script>
+  </body>
+</html>
