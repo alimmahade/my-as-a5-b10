@@ -1,10 +1,10 @@
 const donateButton = document.getElementById("donate-btn");
-donateButton.addEventListener("click", function donateCal() {
+donateButton.addEventListener("click", function () {
   const donateInputField = document.getElementById("donate-input-field");
   const donateAmountString = donateInputField.value;
   const donateAmount = parseFloat(donateAmountString);
   if (donateAmount <= 0 || isNaN(donateAmount)) {
-    return alert("invalid amount");
+    return alert("invalid Donation amount");
   } else {
     alert("Thank you");
   }
