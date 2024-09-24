@@ -30,6 +30,7 @@ donateButtonN.addEventListener("click", function () {
   const previousTotalDonateAmountText = document.getElementById(
     "total-donate-amount-N"
   );
+  my_modal_1.showModal();
   const previousTotalDonateAmountString =
     previousTotalDonateAmountText.innerText;
   const previousTotalDonateAmount = parseFloat(previousTotalDonateAmountString);
