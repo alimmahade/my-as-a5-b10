@@ -13,12 +13,14 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="max-w-7xl mx-auto">
+  <body class="max-w-7xl mx-auto bg-black">
     <!-- section: Navbar start -->
-    <div class="bg-white shadow sticky top-0">
+    <div class="bg-white shadow sticky top-1 z-40">
       <nav class="p-4 m-4 flex justify-between items-center bg-[#F9F7F3]">
         <div>
-          <a href="blog.html"> Blog </a>
+          <a href="blog.html" class="bg-[#b4f461] border rounded px-8 py-4">
+            Blog
+          </a>
         </div>
         <div class="flex items-center">
           <img src="assets/logo.png" alt="" />
@@ -26,59 +28,89 @@
         </div>
         <div class="flex items-center space-x-2">
           <img src="assets/coin.png" alt="" />
-          <span id="my-bal">55500</span>
+          <span id="my-bal">555000</span>
+          <span>BDT</span>
         </div>
       </nav>
-      <div class="flex items-center justify-center">
-        <button id="donation-tab" class="bg-[#B4F461]">Donation</button>
-        <button id="history-tab">History</button>
+      <div class="flex items-center justify-center gap-6 p-4">
+        <button id="donation-tab" class="bg-[#B4F461] border rounded px-8 py-4">
+          Donation
+        </button>
+        <button id="history-tab" class="border rounded px-8 py-4">
+          History
+        </button>
       </div>
     </div>
     <!-- section: End -->
 
     <!-- section: Card Start -->
-    <section id="card-section">
-      <div class="flex gap-x-6 items-center">
-        <div>
-          <img src="assets/noakhali.png" alt="" />
-        </div>
-        <div class="space-y-2">
-          <p class="flex items-center space-x-1">
-            <img src="assets/coin.png" alt="" />
-            <span id="total-donate-amount">500</span>
-            <span>BDT</span>
-          </p>
-          <h3 id="donate-zone">Donate for Flood at Noakhali, Bangladesh</h3>
-          <p>
-            The recent floods in Noakhali have caused significant damage to
-            homes infrastructure. Your donation will help provide essential
-            supplies and to those affected by this disaster. Every contribution,
-            big or small, makes difference. Please join us in supporting the
-            relief efforts and making a positive impact on the lives of those in
-            need.
-          </p>
-          <input
-            id="donate-input-field"
-            class="border py-2 bordrer"
-            placeholder="Donate amount"
-            type="text"
-          />
-          <button id="donate-btn" class="border rounded px-4 py-2 btn">
-            Donate Now
-          </button>
+    <section id="card-section" class="mb-12">
+      <div class="card border shadow-sm p-4 m-4">
+        <div
+          class="flex flex-col md:flex-row mt-8 gap-x-6 justify-start items-center"
+        >
+          <div>
+            <img src="assets/noakhali.png" alt="" />
+          </div>
+          <div class="space-y-2">
+            <div
+              class="flex w-32 items-center space-x-1 bg-gray-500 rounded-full"
+            >
+              <img src="assets/coin.png" alt="" />
+              <span id="total-donate-amount-N">500</span>
+              <span>BDT</span>
+            </div>
+            <h3 id="donate-zone-N" class="text-xl">
+              Donate for Flood at Noakhali, Bangladesh
+            </h3>
+            <p>
+              The recent floods in Noakhali have caused significant damage to
+              homes infrastructure. Your donation will help provide essential
+              supplies and to those affected by this disaster. Every
+              contribution, big or small, makes difference. Please join us in
+              supporting the relief efforts and making a positive impact on the
+              lives of those in need.
+            </p>
+            <input
+              id="donate-input-field-N"
+              class="flex border py-2 bordrer"
+              placeholder="Donate amount"
+              type="number"
+            />
+            <!--section: modal start -->
+            <button
+              class="btn bg-[#B4F461] border rounded px-8 py-4 btn md:text-center"
+              onclick="my_modal_1.showModal()"
+              id="donate-btn-N"
+            >
+              Donate Now
+            </button>
+            <dialog id="my_modal_1" class="modal">
+              <div class="modal-box">
+                <h3 class="text-lg font-bold">Congrats!</h3>
+                <p class="py-4">You have Donated for Humankind</p>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+            <!--section: Modal End -->
+          </div>
         </div>
       </div>
     </section>
 
     <!-- section: History sec start -->
     <section>
-      <div id="history-section" class="space-y-2 bg-red-400 hidden">
+      <div id="history-section" class="space-y-2 bg-[#b4f461] hidden">
         <h2 class="text-2xl flex justify-center items-center">
           Donate History
         </h2>
       </div>
     </section>
-    <!-- section: History sec End -->
     <script></script>
 
     <script src="donate.js"></script>
