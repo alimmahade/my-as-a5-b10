@@ -1,1 +1,21 @@
-onclick="my_modal_1.showModal()"
+onclick="
+
+function getInputValuebyId(id) {
+  return parseFloat(document.getElementById(id).value);
+}
+document.getElementById("donate-btn-F").addEventListener("click", function () {
+  const donateAmounF = getInputValuebyId("donate-input-field-F");
+  const previousTotalDonateAmount = parseFloat(
+    document.getElementById("total-donate-amount-F").innerText
+  );
+  let updateTotalDonateAmount = donateAmounF + previousTotalDonateAmount;
+  document.getElementById("total-donate-amount-F").innerText =
+    updateTotalDonateAmount.toFixed(2);
+  const myBalanceText = getEleById("my-bal").innerText;
+  const myBalance = parseFloat(myBalanceText);
+  console.log(myBalance);
+});
+
+
+
+---------------------------------------

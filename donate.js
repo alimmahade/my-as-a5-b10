@@ -58,3 +58,23 @@ donateButtonN.addEventListener("click", function () {
   let historySection = getEleById("history-section");
   historySection.appendChild(historyItem);
 });
+// ---------------------Feni -----------------------------
+function getInputValuebyId(id) {
+  return parseFloat(document.getElementById(id).value);
+}
+document.getElementById("donate-btn-F").addEventListener("click", function () {
+  const donateAmountF = getInputValuebyId("donate-input-field-F");
+  const previousTotalDonateAmount = parseFloat(
+    document.getElementById("total-donate-amount-F").innerText
+  );
+  let updateTotalDonateAmount = donateAmountF + previousTotalDonateAmount;
+  document.getElementById("total-donate-amount-F").innerText =
+    updateTotalDonateAmount.toFixed(2);
+  let myBalanceText = getEleById("my-bal").innerText;
+  const myBalance = parseFloat(myBalanceText);
+  const updateMyBalance = myBalance - donateAmountF;
+  console.log(updateMyBalance);
+  document.getElementById("my-bal").innerText = updateMyBalance;
+  my_modal_2.showModal();
+  document.getElementById("donate-input-field-F").value = "";
+});
