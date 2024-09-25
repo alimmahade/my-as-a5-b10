@@ -64,6 +64,9 @@ function getInputValuebyId(id) {
 }
 document.getElementById("donate-btn-F").addEventListener("click", function () {
   const donateAmountF = getInputValuebyId("donate-input-field-F");
+  if (donateAmountF <= 0 || isNaN(donateAmountF)) {
+    return alert("invalid Donation amount");
+  }
   const previousTotalDonateAmount = parseFloat(
     document.getElementById("total-donate-amount-F").innerText
   );
@@ -77,4 +80,19 @@ document.getElementById("donate-btn-F").addEventListener("click", function () {
   document.getElementById("my-bal").innerText = updateMyBalance;
   my_modal_2.showModal();
   document.getElementById("donate-input-field-F").value = "";
+
+  // ----------------------------Feni History
+  const donateZone = getEleById("donate-zone-F").innerText;
+  const historyItem = document.createElement("div");
+
+  historyItem.className = "bg-white p-3 rounded-md border border-indigo-500";
+  historyItem.innerHTML = `
+      <p class='text-md text-gray-500'>${donateAmountF.toFixed(
+        2
+      )} taka for ${donateZone}  </p>
+        <p class='text-md text-gray-500'>${new Date()}</p>
+            `;
+
+  let historySection = getEleById("history-section");
+  historySection.appendChild(historyItem);
 });
