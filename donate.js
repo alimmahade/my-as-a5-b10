@@ -26,6 +26,8 @@ donateButtonN.addEventListener("click", function () {
   const donateAmount = parseFloat(donateInputField.value);
   if (donateAmount <= 0 || isNaN(donateAmount)) {
     return alert("invalid Donation amount");
+  } else {
+    alert("Thank You");
   }
   const previousTotalDonateAmountText = document.getElementById(
     "total-donate-amount-N"
@@ -66,6 +68,8 @@ document.getElementById("donate-btn-F").addEventListener("click", function () {
   const donateAmountF = getInputValuebyId("donate-input-field-F");
   if (donateAmountF <= 0 || isNaN(donateAmountF)) {
     return alert("invalid Donation amount");
+  } else {
+    alert("Thank You");
   }
   const previousTotalDonateAmount = parseFloat(
     document.getElementById("total-donate-amount-F").innerText

@@ -17,7 +17,7 @@
     <!-- section: Navbar start -->
     <div class="bg-white shadow sticky top-1 z-40">
       <nav
-        class="p-4 m-4 flex flex-col sm:flex-row justify-between items-center bg-[#F9F7F3]"
+        class="p-4 m-4 flex flex-col sm:flex-row sm:font-bold font-normal justify-between items-center bg-[#F9F7F3]"
       >
         <div>
           <a href="blog.html" class="bg-[#b4f461] border rounded px-8 py-4">
@@ -235,6 +235,8 @@
           const donateAmountM = getInputValuebyId("donate-input-field-M");
           if (donateAmountM <= 0 || isNaN(donateAmountM)) {
             return alert("invalid Donation amount");
+          } else {
+            alert("Thank You");
           }
           const previousTotalDonateAmount = parseFloat(
             document.getElementById("total-donate-amount-M").innerText
